@@ -1,3 +1,84 @@
 body {
-  background-color: bisque;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input {
+  width: 100%;
+  border: none;
+  height: 30px;
+  font-style: italic;
+}
+
+.main {
+  width: 40%;
+  margin: 100px auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f4f5f4;
+  padding: 15px;
+}
+
+#title {
+  font-size: 20px;
+  margin: 0;
+  color: #9a9ca2;
+}
+
+.todo-form {
+  border-bottom: 1px solid #f4f5f4;
+  padding: 15px;
+}
+
+.todo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  background: none;
+  outline: none;
+  width: 25px;
+}
+
+#lists {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f4f5f4;
+  padding: 15px;
+}
+
+.listItemWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#checkbox {
+  width: 15px;
+  border-color: #c0c0c3;
+}
+
+.clear {
+  text-align: center;
+  background-color: #f6f6f6;
+}
+
+.clearText {
+  margin: 0;
+  padding: 15px;
+  color: #cacacb;
 }
