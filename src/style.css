@@ -10,6 +10,10 @@ input {
   font-style: italic;
 }
 
+input:focus {
+  outline: none;
+}
+
 .main {
   width: 40%;
   margin: 100px auto;
@@ -62,9 +66,7 @@ input {
 }
 
 .listItemWrapper {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  margin-right: 10px;
 }
 
 #checkbox {
@@ -81,4 +83,15 @@ input {
   margin: 0;
   padding: 15px;
   color: #cacacb;
+}
+
+.edit {
+  width: 100%;
+}
+
+.todoBtn {
+  border: none;
+  background-color: white;
+  outline: none;
+  cursor: pointer;
 }
