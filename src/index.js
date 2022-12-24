@@ -1,5 +1,9 @@
 import addTodoItem from './modules/addTodoItem.js';
-import { addTodo, getTodo, updateTodo } from './modules/storeTodo.js';
+import deleteTodo from './modules/deleteTodo.js';
+import handleCompleted from './modules/handleCompleted.js';
+import {
+  addTodo, getTodo, removeTodo, updateTodo,
+} from './modules/storeTodo.js';
 import './style.css';
 
 const display = () => {
@@ -49,4 +53,24 @@ inputField.forEach((todo, index) => {
       window.location.reload();
     }
   });
+});
+
+window.remove = (index) => {
+  deleteTodo(index);
+  removeTodo(index);
+};
+
+window.completedTodo = (index) => {
+  handleCompleted(index);
+};
+
+document.getElementById('clearCompleted').addEventListener('click', () => {
+  const todos = getTodo();
+  const clearCompleted = todos.filter((todo) => !todo.completed);
+  clearCompleted.forEach((todo, i) => {
+    todo.index = i;
+  });
+
+  localStorage.setItem('todos', JSON.stringify(clearCompleted));
+  window.location.reload();
 });

@@ -14,6 +14,15 @@ input:focus {
   outline: none;
 }
 
+input[type='checkbox'] {
+  margin-right: 10px;
+}
+
+input[type='checkbox']:checked + input {
+  text-decoration: line-through;
+  color: #cacacb;
+}
+
 .main {
   width: 40%;
   margin: 100px auto;
@@ -69,14 +78,15 @@ input:focus {
   margin-right: 10px;
 }
 
-#checkbox {
-  width: 15px;
+.checkbox {
+  width: 20px;
   border-color: #c0c0c3;
 }
 
 .clear {
   text-align: center;
   background-color: #f6f6f6;
+  cursor: pointer;
 }
 
 .clearText {
@@ -87,6 +97,8 @@ input:focus {
 
 .edit {
   width: 100%;
+  font-size: 18px;
+  color: #9a9ca2;
 }
 
 .todoBtn {
