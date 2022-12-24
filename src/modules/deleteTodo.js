@@ -1,5 +1,5 @@
 const deleteTodo = (index) => {
-  const todoIndex = document.getElementById(index);
+  const todoIndex = document.getElementById(`todo${index}`);
   todoIndex.remove();
 };
 
